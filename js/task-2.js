@@ -27,10 +27,15 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-for (const item of images) {
-const image = document.createElement("img");
-image.src = item.url;
-image.alt = item.alt;
-gallery.append(image);
-  
-}
+// for (const item of images) {
+// const image = document.createElement("img");
+// image.src = item.url;
+// image.alt = item.alt;
+// gallery.append(image);
+// }
+
+const markup = images
+  .map((item) => `<li class="list-item"><img alt="${item.alt}" src="${item.url}"/></li>`)
+  .join("");
+
+  gallery.innerHTML = markup;
