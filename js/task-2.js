@@ -38,4 +38,5 @@ const markup = images
   .map((item) => `<li class="list-item"><img alt="${item.alt}" src="${item.url}"/></li>`)
   .join("");
 
-  gallery.innerHTML = markup;
+  
+gallery.insertAdjacentHTML("afterbegin", markup);
