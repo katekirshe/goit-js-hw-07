@@ -1,0 +1,9 @@
+"use strict";
+
+const listItem = document.querySelectorAll(".item")
+console.log(`Number of categories: ${listItem.length}`);
+
+listItem.forEach((element) => {
+    console.log(`Category: ${element.children[0].textContent}`);
+    console.log(`Elements: ${element.children[1].children.length}`);
+});
